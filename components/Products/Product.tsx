@@ -11,6 +11,7 @@ import { numberFormart, myLoader } from "../../utils";
 const Product: FC<IProduct> = ({ product_image, name, price }) => (
   <ProductStyle>
     <Image
+      // @ts-ignore
       loader={myLoader}
       src={product_image}
       alt={name}
