@@ -3,13 +3,30 @@ import styled from "styled-components";
 export const FilterStyle = styled.div`
   padding: 1rem 1.2rem;
   display: grid;
-  justify-content: space-between;
-  grid-template-columns: repeat(2, auto);
-  grid-gap: 2rem;
+  grid-gap: 1rem;
+
+  @media (min-width: 50rem) {
+    justify-content: space-between;
+    grid-template-columns: repeat(2, auto);
+  }
 
   select {
     display: block;
-    max-width: 15rem;
-    min-width: 5rem;
+    width: 100%;
+
+    background-color: #dcdcdc;
+    border: 0;
+    outline: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: auto;
+
+    @media (min-width: 40rem) {
+      min-width: 15rem;
+    }
+  }
+  select:hover,
+  select:focus {
+    opacity: 0.6;
   }
 `;
