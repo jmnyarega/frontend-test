@@ -1,10 +1,11 @@
 import type { FC } from "react";
-import Head from "next/head";
 
 import Intro from "../components/Intro";
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import Products from "../components/Products";
+import Layout from "../components/Layout";
+import Head from "../components/Head";
 
 import { ICategories, IProduct, ISort } from "../types/index.types";
 
@@ -17,29 +18,13 @@ export interface IProps {
 const Home: FC<IProps> = ({ products, categories, sortBy }) => {
   return (
     <div>
-      <Head>
-        <title>Store Front</title>
-        <meta name="description" content="Home of the best shoes in town" />
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin={true}
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <Nav />
-      <Hero />
-      <Intro />
-      <Products products={products} categories={categories} sortBy={sortBy} />
+      <Head />
+      <Layout>
+        <Nav />
+        <Hero />
+        <Intro />
+        <Products products={products} categories={categories} sortBy={sortBy} />
+      </Layout>
     </div>
   );
 };

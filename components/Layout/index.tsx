@@ -1,9 +1,12 @@
-import type { FC } from "react";
-import { AppProps } from "next/dist/shared/lib/router/router";
+import type { FC, ReactNode } from "react";
 
 import { Main } from "./Main.styles";
 
-const Layout: FC<AppProps> = (props) => (
+interface IProps {
+  children: ReactNode;
+}
+
+const Layout: FC<IProps> = (props) => (
   <div>
     <Main>{props.children}</Main>
   </div>
