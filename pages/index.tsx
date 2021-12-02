@@ -1,11 +1,10 @@
 import type { FC } from "react";
 import Head from "next/head";
-// import Image from "next/image";
-import styles from "../styles/Home.module.css";
+
+import Intro from "../components/Intro";
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
-import Intro from "../components/Intro";
-import Product from "../components/Products";
+import Products from "../components/Products";
 
 import { ICategories, IProduct, ISort } from "../types/index.types";
 
@@ -17,7 +16,7 @@ export interface IProps {
 
 const Home: FC<IProps> = ({ products, categories, sortBy }) => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Store Front</title>
         <meta name="description" content="Home of the best shoes in town" />
