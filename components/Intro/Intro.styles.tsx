@@ -5,30 +5,37 @@ export const Intro = styled.div`
   max-width: 35ch;
   margin: 0 auto;
 
-  margin-top: 2rem;
+  margin-top: 4rem;
   position: relative;
+
+  @media (min-width: 50rem) {
+    max-width: 50ch;
+  }
 `;
 
 export const IntroTitle = styled.h2`
   font-size: 1.2rem;
-  color: palevioletred;
 `;
 
 export const IntroBadge = styled.div`
   position: absolute;
   left: 50%;
-  top: -2rem;
+  top: -4rem;
   transform: translate(-50%, -50%);
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 50%;
-  height: 2rem;
-  width: 2rem;
-  background: black;
+  height: 4rem;
+  width: 4rem;
+
+  background-image: url(https://i.pinimg.com/originals/10/d9/65/10d965554ba71a58d4aed3cfee2624bc.png);
+  background-position: center;
+  background-size: cover;
 `;
 
 export const IntroParagraph = styled.p`
   font-size: 1rem;
   margin-top: 0.5rem;
+  color: #434344;
 `;
 
 export const IntroSocialLinks = styled.div`
@@ -36,6 +43,11 @@ export const IntroSocialLinks = styled.div`
   display: flex;
   justify-content: center;
   column-gap: 0.5rem;
-
   margin-top: 0.5rem;
+  color: #434344;
+
+  a {
+    font: inherit;
+    color: inherit;
+  }
 `;
