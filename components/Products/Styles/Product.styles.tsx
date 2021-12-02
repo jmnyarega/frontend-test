@@ -5,6 +5,9 @@ export const ProductStyle = styled.div`
   padding: 0.5rem;
   font-size: 0.8575rem;
   max-width: 35ch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   img {
     background-color: hsl(0, 0%, 80%);
     object-fit: cover;
@@ -12,7 +15,7 @@ export const ProductStyle = styled.div`
 `;
 
 export const ProductInfo = styled.div`
-  min-height: 5rem;
+  min-height: 7rem;
 
   .price {
     color: #434344;
