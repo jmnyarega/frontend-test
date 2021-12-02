@@ -1,23 +1,14 @@
-import React from "react";
+import { FC } from "react";
 import Image from "next/image";
-import { ProductStyle } from "./Styles/Product.styles";
+import {
+  ProductStyle,
+  ProductInfo,
+  ProductButtons,
+} from "./Styles/Product.styles";
+import { IProduct } from "../../types/index.types";
+import { numberFormart, myLoader } from "../../utils";
 
-interface IProduct {
-  product_image: string;
-  name: string;
-  price: string;
-}
-
-interface ILoader {
-  src: string;
-  width: number;
-  quality: number;
-}
-
-const myLoader = ({ src, width, quality }: ILoader) =>
-  `${src}?w=${width}&q=${quality}`;
-
-const Product = ({ product_image, name, price }: IProduct) => (
+const Product: FC<IProduct> = ({ product_image, name, price }) => (
   <ProductStyle>
     <Image
       loader={myLoader}
@@ -27,8 +18,14 @@ const Product = ({ product_image, name, price }: IProduct) => (
       width={250}
       height={200}
     />
-    <p>{name}</p>
-    <p>Ksh{price}</p>
+    <ProductInfo>
+      <p className="name">{name}</p>
+      <p className="price">{numberFormart(Number(price))}</p>
+    </ProductInfo>
+    <ProductButtons>
+      <button>Buy now</button>
+      <button>Add to cart</button>
+    </ProductButtons>
   </ProductStyle>
 );
 
