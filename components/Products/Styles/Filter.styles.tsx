@@ -13,11 +13,12 @@ export const FilterStyle = styled.div`
   select {
     display: block;
     width: 100%;
+    cursor: pointer;
 
     background-color: #dcdcdc;
     border: 0;
     outline: none;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     margin: auto;
 

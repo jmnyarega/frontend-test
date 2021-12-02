@@ -17,7 +17,7 @@ export interface IProps {
 
 const Home: FC<IProps> = ({ products, categories, sortBy }) => {
   return (
-    <div>
+    <>
       <Head />
       <Layout>
         <Nav />
@@ -25,7 +25,7 @@ const Home: FC<IProps> = ({ products, categories, sortBy }) => {
         <Intro />
         <Products products={products} categories={categories} sortBy={sortBy} />
       </Layout>
-    </div>
+    </>
   );
 };
 

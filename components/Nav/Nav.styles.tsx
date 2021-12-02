@@ -24,7 +24,7 @@ export const ButtonStyles = styled.button`
   cursor: pointer;
 
   :hover,
-  .button:focus {
+  :focus {
     opacity: 0.5;
   }
 `;
