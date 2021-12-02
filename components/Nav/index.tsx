@@ -1,22 +1,26 @@
 import React from "react";
-import styles from "./index.module.css";
+import {
+  NavStyles,
+  CartStyles,
+  SearchStyles,
+  ButtonStyles,
+} from "./Nav.styles";
 
-function Nav({}) {
+const Nav = () => {
   return (
-    <div className={styles.nav}>
-      {/* Make separate component */}
-      <div className="search">
-        <button className={styles.button}>
+    <NavStyles>
+      <SearchStyles>
+        <ButtonStyles>
           <i className="fa fa-search"></i>
-        </button>
-      </div>
-      {/* Make separate component */}
-      <div className="cart">
-        <button className={styles.button}>
+        </ButtonStyles>
+        <input type="search" name="" id="" placeholder="Search for a product" />
+      </SearchStyles>
+      <CartStyles>
+        <ButtonStyles>
           <i className="fa fa-shopping-cart"></i>
-        </button>
-      </div>
-    </div>
+        </ButtonStyles>
+      </CartStyles>
+    </NavStyles>
   );
-}
+};
 export default Nav;
