@@ -1,15 +1,15 @@
 import { FC } from "react";
 import Image from "next/image";
 import {
-  ProductStyle,
-  ProductInfo,
-  ProductButtons,
+  ProductStyles,
+  ProductInfoStyles,
+  ProductButtonsStyles,
 } from "./Styles/Product.styles";
 import { IProduct } from "../../types/index.types";
 import { numberFormart, myLoader } from "../../utils";
 
 const Product: FC<IProduct> = ({ product_image, name, price }) => (
-  <ProductStyle>
+  <ProductStyles>
     <Image
       // @ts-ignore
       loader={myLoader}
@@ -19,15 +19,15 @@ const Product: FC<IProduct> = ({ product_image, name, price }) => (
       width={250}
       height={200}
     />
-    <ProductInfo>
+    <ProductInfoStyles>
       <p className="name">{name}</p>
       <p className="price">Ksh {numberFormart(Number(price))}</p>
-    </ProductInfo>
-    <ProductButtons>
+    </ProductInfoStyles>
+    <ProductButtonsStyles>
       <button>Buy now</button>
       <button>Add to cart</button>
-    </ProductButtons>
-  </ProductStyle>
+    </ProductButtonsStyles>
+  </ProductStyles>
 );
 
 export default Product;

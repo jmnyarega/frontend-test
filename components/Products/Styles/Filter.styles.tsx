@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../../utils/base.styles";
 
 export const FilterStyle = styled.div`
   padding: 1rem 1.2rem;
@@ -15,7 +16,7 @@ export const FilterStyle = styled.div`
     width: 100%;
     cursor: pointer;
 
-    background-color: #dcdcdc;
+    background-color: ${theme.colors.lightGray};
     border: 0;
     outline: none;
     padding: 0.5rem 1rem;

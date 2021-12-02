@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../utils/base.styles";
 
 export const Intro = styled.div`
   text-align: center;
@@ -35,7 +36,7 @@ export const IntroBadge = styled.div`
 export const IntroParagraph = styled.p`
   font-size: 1rem;
   margin-top: 0.5rem;
-  color: #434344;
+  color: ${theme.colors.primaryColor};
 `;
 
 export const IntroSocialLinks = styled.div`
@@ -44,7 +45,7 @@ export const IntroSocialLinks = styled.div`
   justify-content: center;
   column-gap: 0.5rem;
   margin-top: 0.5rem;
-  color: #434344;
+  color: ${theme.colors.primaryColor};
 
   a {
     font: inherit;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { theme } from "../../../utils/base.styles";
 
-export const ProductStyle = styled.div`
+export const ProductStyles = styled.div`
   justify-self: center;
   padding: 0.5rem;
   font-size: 0.8575rem;
@@ -9,16 +10,18 @@ export const ProductStyle = styled.div`
   flex-direction: column;
   justify-content: space-between;
   img {
-    background-color: hsl(0, 0%, 80%);
+    background-color: ${theme.colors.darkGray};
+    min-height: 12rem;
+    border-radius: 0.2rem;
     object-fit: cover;
   }
 `;
 
-export const ProductInfo = styled.div`
-  min-height: 7rem;
+export const ProductInfoStyles = styled.div`
+  min-height: 5.5rem;
 
   .price {
-    color: #434344;
+    color: ${theme.colors.primaryColor};
     margin-top: 0.5rem;
   }
 
@@ -27,7 +30,7 @@ export const ProductInfo = styled.div`
   }
 `;
 
-export const ProductButtons = styled.div`
+export const ProductButtonsStyles = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -35,7 +38,7 @@ export const ProductButtons = styled.div`
 
   button {
     padding: 0.2em 0.6em;
-    border: 1px solid #dcdcdc;
+    border: 1px solid ${theme.colors.lightGray};
     background-color: transparent;
     border-radius: 0.1em;
     outline: none;

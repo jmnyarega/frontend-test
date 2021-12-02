@@ -1,5 +1,6 @@
 ## Store Front Application
  - Application to display a list of products for a vendor
+ - The application is deployed [here](https://frontend-store-gules.vercel.app/)
 
 ### System prerequisites
  - nodejs v10 or later
