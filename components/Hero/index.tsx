@@ -1,8 +1,5 @@
-import React from "react";
-import { Hero } from "./Hero.styles";
+import { HeroStyles } from "./Hero.styles";
 
-function Index() {
-  return <Hero />;
-}
+const Hero = () => <HeroStyles />;
 
-export default Index;
+export default Hero;
