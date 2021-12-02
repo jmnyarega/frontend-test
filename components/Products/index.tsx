@@ -1,40 +1,31 @@
-import React from "react";
+import { FC } from "react";
 import Product from "./Product";
+import Filter from "./Filter";
 import { ProductsStyle } from "./Styles/Products.styles";
+import { ICategories, IProduct, ISort } from "../../types/index.types";
 
-const data = [
-  {
-    product_image:
-      "https://image.goat.com/375/attachments/product_template_pictures/images/008/654/900/original/52015_00.png.png",
-    name: "Air Jordan 1 Retro High OG 'Shadow' 2018",
-    price: "16000",
-  },
-  {
-    product_image:
-      "https://image.goat.com/750/attachments/product_template_pictures/images/011/119/994/original/218099_00.png.png",
-    name: "Air Jordan 1 Retro High OG 'Shadow' 2018",
-    price: "16000",
-  },
-  {
-    product_image:
-      "https://image.goat.com/750/attachments/product_template_pictures/images/011/119/994/original/218099_00.png.png",
-    name: "Air Jordan 1 Retro High OG 'Shadow' 2018",
-    price: "16000",
-  },
-];
+interface IProps {
+  products: IProduct[];
+  categories: ICategories;
+  sortBy: ISort;
+}
 
-const index = () => {
+const Index: FC<IProps> = ({ products, categories, sortBy }) => {
   return (
-    <ProductsStyle>
-      {data.map((d) => (
-        <Product
-          product_image={d.product_image}
-          name={d.name}
-          price={d.price}
-        />
-      ))}
-    </ProductsStyle>
+    <>
+      <Filter categories={categories} sortBy={sortBy} />
+      <ProductsStyle>
+        {products.map((d) => (
+          <Product
+            key={d.name}
+            product_image={d.product_image}
+            name={d.name}
+            price={d.price}
+          />
+        ))}
+      </ProductsStyle>
+    </>
   );
 };
 
-export default index;
+export default Index;
