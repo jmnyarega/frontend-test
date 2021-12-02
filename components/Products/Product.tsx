@@ -21,7 +21,7 @@ const Product: FC<IProduct> = ({ product_image, name, price }) => (
     />
     <ProductInfo>
       <p className="name">{name}</p>
-      <p className="price">{numberFormart(Number(price))}</p>
+      <p className="price">Ksh {numberFormart(Number(price))}</p>
     </ProductInfo>
     <ProductButtons>
       <button>Buy now</button>
